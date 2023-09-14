@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <header class="d-inline">
+    <nav-app brandName="Story App"></nav-app>
+  </header>
+
+  <main>
+    <div class="container mt-5">
+      <h1 class="mb-3">Tambah Cerita</h1>
+
+      <form id="addStoryForm" novalidate>
+        <div class="mb-3">
+          <!-- <label for="photoInput" class="form-label">Photo</label> -->
+          <!-- <input type="file" class="form-control" id="photoInput" accept="image/*" required> -->
+          <input-image-with-preview
+            inputId="photoInput"
+            required
+          ></input-image-with-preview>
+        </div>
+        <div class="mb-3">
+          <!-- <label for="descriptionInput" class="form-label">Description</label>
+          <textarea id="descriptionInput" class="form-control" rows="3" required></textarea> -->
+          <textarea-with-validation
+            inputId="descriptionInput"
+            required
+          >
+          </textarea-with-validation>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
